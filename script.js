@@ -5,19 +5,13 @@ const more = document.getElementById("more");
 
 const apiURL = "https://api.lyrics.ovh";
 
-
-
 //search by song or artist
 
-
-const searchsongs=(term )=>{
-
-}
-
-
-
-
-
+const searchSongs = async (term) => {
+  const response = await fetch(`${apiURL}/suggest/${term}`);
+  const data = await response.json();
+  console.log(data)
+};
 
 //event listeners
 
