@@ -50,6 +50,19 @@ function showData(data) {
 }
 
 
+// Get prev and next songs
+const getMoreSongs=async(url)=> {
+  const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
+  const data = await res.json();
+
+  showData(data);
+}
+
+
+
+
+
+
 //event listeners
 
 form.addEventListener("submit", (e) => {
